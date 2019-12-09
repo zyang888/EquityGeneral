@@ -1,6 +1,6 @@
 # EquityGeneral Website
 
-This is a EquityGeneral website
+This is a EquityGeneral website https://zyang888.github.io/EquityGeneral/
 
 ## Testing
 
@@ -9,8 +9,8 @@ To ensure site quality, the website was tested on 3 different browsers and 3 dif
 100% Zoom
 * Header image and button size and position
 * Side Bar size and position
-* Dog tiles size and position
-* Dog tiles hover function
+* Project size and position
+* Porject hover function
 * Text do not overlap or create too much gap
 
 Varying Zoom
