@@ -1,0 +1,139 @@
+$breakpoint-small: 768px;
+$breakpoint-medium: 960px;
+
+h1,h2 {
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+}
+.profile,
+.team {
+  padding: 2rem 0;
+}
+
+.profile {
+  article {
+    display: flex;
+  }
+  h3 {
+    text-transform: none;
+  }
+  h4 {
+    text-transform: none;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  a {
+    text-transform: none;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+  article {
+    display: flex;
+    flex-direction: column;
+    div {
+      margin-top: 1rem;
+    }
+  }
+  .profile {
+    img {
+    height: 25rem;
+    width: 100%;
+    padding: 0 0;
+  }
+
+}
+}
+
+/*--------------------------------------------------------------
+# team
+--------------------------------------------------------------*/
+
+.members {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.teamcard {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15rem;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: var(--color_grey);
+  }
+}
+
+.teamcard:hover {
+  cursor: pointer;
+}
+
+.teamcard:hover .overlay {
+  opacity: 0.5;
+}
+
+.teamcard:hover h4 {
+  text-decoration: underline;
+}
+
+.teamcard .text {
+  color: white;
+  font-size: 20px;
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-bottom: 2px solid white;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.teamcard:hover .text {
+  opacity: 1;
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .teamcard {
+    width: 47%;
+    img {
+      height: 16rem;
+    }
+    .overlay {
+      height: 20rem;
+    }
+  }
+}
